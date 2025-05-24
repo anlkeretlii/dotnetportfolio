@@ -1,0 +1,323 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\views\\shared\\components\\_aboutcomponentpartial.cs\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:views\\shared\\components\\_aboutcomponentpartial.cs\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\viewcomponents\\_skillcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:viewcomponents\\_skillcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\views\\shared\\components\\_skillcomponentpartial.cs\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:views\\shared\\components\\_skillcomponentpartial.cs\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\context\\myportfoliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\context\\myportfoliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Migrations\\20250522125731_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250522125731_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\socialmedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\socialmedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\testimonial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\testimonial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\experience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\experience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\dal\\entities\\feature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:dal\\entities\\feature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|c:\\users\\cucin\\desktop\\c# \u00F6devler\\netcoreportfolyo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{03C9B0EF-9088-4652-8B6A-B5F1608F88A3}|netcoreportfolyo.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Views\\Shared\\Components\\_SkillComponentPartial.cs\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_SkillComponentPartial.cs\\Default.cshtml",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Views\\Shared\\Components\\_SkillComponentPartial.cs\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_SkillComponentPartial.cs\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T19:49:26.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_SkillComponentPartial.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\ViewComponents\\_SkillComponentPartial.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\_SkillComponentPartial.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\ViewComponents\\_SkillComponentPartial.cs",
+              "RelativeToolTip": "ViewComponents\\_SkillComponentPartial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T19:48:18.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Views\\Shared\\Components\\_AboutComponentPartial.cs\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_AboutComponentPartial.cs\\Default.cshtml",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Views\\Shared\\Components\\_AboutComponentPartial.cs\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_AboutComponentPartial.cs\\Default.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T19:46:23.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Views\\Default\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Default\\Index.cshtml",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Views\\Default\\Index.cshtml",
+              "RelativeToolTip": "Views\\Default\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T13:16:04.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DefaultController.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Controllers\\DefaultController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DefaultController.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Controllers\\DefaultController.cs",
+              "RelativeToolTip": "Controllers\\DefaultController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T13:01:57.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250522125731_mig1.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Migrations\\20250522125731_mig1.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250522125731_mig1.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\Migrations\\20250522125731_mig1.cs",
+              "RelativeToolTip": "Migrations\\20250522125731_mig1.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:57:31.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyPortfolioContext.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Context\\MyPortfolioContext.cs",
+              "RelativeDocumentMoniker": "DAL\\Context\\MyPortfolioContext.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Context\\MyPortfolioContext.cs",
+              "RelativeToolTip": "DAL\\Context\\MyPortfolioContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:55:31.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SocialMedia.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\SocialMedia.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\SocialMedia.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\SocialMedia.cs",
+              "RelativeToolTip": "DAL\\Entities\\SocialMedia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:52:14.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Message.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Message.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Message.cs",
+              "RelativeToolTip": "DAL\\Entities\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:51:35.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Contact.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Contact.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Contact.cs",
+              "RelativeToolTip": "DAL\\Entities\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:50:53.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Testimonial.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Testimonial.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Testimonial.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Testimonial.cs",
+              "RelativeToolTip": "DAL\\Entities\\Testimonial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:31:02.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Portfolio.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Portfolio.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Portfolio.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Portfolio.cs",
+              "RelativeToolTip": "DAL\\Entities\\Portfolio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:29:36.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Experience.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Experience.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Experience.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Experience.cs",
+              "RelativeToolTip": "DAL\\Entities\\Experience.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T12:28:10.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "About.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\About.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\About.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\About.cs",
+              "RelativeToolTip": "DAL\\Entities\\About.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:50:57.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Skill.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Skill.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Skill.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Skill.cs",
+              "RelativeToolTip": "DAL\\Entities\\Skill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:50:26.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Feature.cs",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Feature.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Feature.cs",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\DAL\\Entities\\Feature.cs",
+              "RelativeToolTip": "DAL\\Entities\\Feature.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:48:27.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\cucin\\Desktop\\c# \u00F6devler\\netcoreportfolyo\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-22T11:44:43.826Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 158,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
