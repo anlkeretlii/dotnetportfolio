@@ -4,8 +4,6 @@ Bu proje, **Murat Yücedağ**'ın Udemy'deki kapsamlı ASP.NET Core kursları sa
 
 ![.NET Core](https://img.shields.io/badge/.NET-8.0-purple?style=flat&logo=dotnet)
 ![Entity Framework](https://img.shields.io/badge/Entity%20Framework-Core-blue?style=flat&logo=microsoft)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-purple?style=flat&logo=bootstrap)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
 ## 📖 Proje Hakkında
 
