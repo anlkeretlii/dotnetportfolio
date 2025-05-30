@@ -1,0 +1,167 @@
+@model netcoreportfolyo.DAL.Entities.SiteSettings
+@{
+    ViewData["Title"] = "Site Ayarları Yönetimi";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Site Ayarları Yönetimi</h4>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Site Ayarları</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="/AdminDashboard/UpdateSiteSettings">
+                            <input type="hidden" asp-for="SiteSettingsId" />
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="SiteName">Site Adı</label>
+                                        <input type="text" class="form-control" asp-for="SiteName" placeholder="Site adını girin" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="AdminPanelTitle">Admin Panel Başlığı</label>
+                                        <input type="text" class="form-control" asp-for="AdminPanelTitle" placeholder="Admin panel başlığını girin" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="LogoUrl">Logo URL</label>
+                                        <input type="text" class="form-control" asp-for="LogoUrl" placeholder="Logo URL'sini girin" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="FaviconUrl">Favicon URL</label>
+                                        <input type="text" class="form-control" asp-for="FaviconUrl" placeholder="Favicon URL'sini girin" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="SearchPlaceholder">Arama Placeholder Metni</label>
+                                <input type="text" class="form-control" asp-for="SearchPlaceholder" placeholder="Arama kutusu placeholder metnini girin" />
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="MaintenanceMessage">Bakım Modu Mesajı</label>
+                                <textarea class="form-control" asp-for="MaintenanceMessage" rows="3" placeholder="Bakım modu aktif olduğunda gösterilecek mesajı girin"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" asp-for="IsMaintenanceMode" />
+                                    <label class="form-check-label" for="IsMaintenanceMode">
+                                        Bakım Modu Aktif
+                                    </label>
+                                </div>
+                                <small class="form-text text-muted">
+                                    Bu seçenek işaretlendiğinde site bakım moduna geçer ve ziyaretçiler bakım mesajını görür.
+                                </small>
+                            </div>
+                            
+                            <div class="form-group text-right">
+                                <a href="/AdminDashboard/Index" class="btn btn-secondary">Geri Dön</a>
+                                <button type="submit" class="btn btn-primary">Ayarları Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Önizleme Kartı -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Mevcut Ayarlar Önizlemesi</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th width="40%">Site Adı:</th>
+                                        <td>@(Model.SiteName ?? "Henüz tanımlanmamış")</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Admin Panel Başlığı:</th>
+                                        <td>@(Model.AdminPanelTitle ?? "Henüz tanımlanmamış")</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Logo URL:</th>
+                                        <td>
+                                            @if (!string.IsNullOrEmpty(Model.LogoUrl))
+                                            {
+                                                <a href="@Model.LogoUrl" target="_blank">@Model.LogoUrl</a>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">Henüz tanımlanmamış</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th width="40%">Favicon URL:</th>
+                                        <td>
+                                            @if (!string.IsNullOrEmpty(Model.FaviconUrl))
+                                            {
+                                                <a href="@Model.FaviconUrl" target="_blank">@Model.FaviconUrl</a>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">Henüz tanımlanmamış</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Arama Placeholder:</th>
+                                        <td>@(Model.SearchPlaceholder ?? "Henüz tanımlanmamış")</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bakım Modu:</th>
+                                        <td>
+                                            @if (Model.IsMaintenanceMode)
+                                            {
+                                                <span class="badge badge-warning">Aktif</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-success">Pasif</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        @if (!string.IsNullOrEmpty(Model.MaintenanceMessage))
+                        {
+                            <div class="mt-3">
+                                <h6>Bakım Modu Mesajı:</h6>
+                                <div class="alert alert-warning">
+                                    @Model.MaintenanceMessage
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

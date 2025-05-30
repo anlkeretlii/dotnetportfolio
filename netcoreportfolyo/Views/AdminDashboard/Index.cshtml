@@ -1,0 +1,379 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Admin Dashboard</h4>
+        
+        <!-- İstatistik Kartları -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-stats card-primary">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Toplam Mesaj</p>
+                                    <h4 class="card-title">@ViewBag.TotalMessages</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-info">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-envelope-open"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Okunmamış Mesaj</p>
+                                    <h4 class="card-title">@ViewBag.UnreadMessages</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-success">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-cog"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Toplam Yetenek</p>
+                                    <h4 class="card-title">@ViewBag.TotalSkills</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-warning">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-tasks"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Yapılacak İşler</p>
+                                    <h4 class="card-title">@ViewBag.TotalToDoItems</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- İkinci Sıra İstatistikler -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-stats card-secondary">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-briefcase"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Portfolio</p>
+                                    <h4 class="card-title">@ViewBag.TotalPortfolios</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-danger">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-clock-o"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Deneyimler</p>
+                                    <h4 class="card-title">@ViewBag.TotalExperiences</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-primary">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-star"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Referanslar</p>
+                                    <h4 class="card-title">@ViewBag.TotalTestimonials</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-info">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-bell"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Bildirimler</p>
+                                    <h4 class="card-title">@ViewBag.TotalNotifications</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hızlı Erişim ve Son Aktiviteler -->
+        <div class="row">
+            <!-- Hızlı Erişim -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Hızlı Erişim</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <a href="/AdminDashboard/AboutManagement" class="btn btn-primary btn-block">
+                                    <i class="la la-user"></i> Hakkımda Yönetimi
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/AdminDashboard/PortfolioManagement" class="btn btn-info btn-block">
+                                    <i class="la la-briefcase"></i> Portfolio Yönetimi
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/AdminDashboard/SkillManagement" class="btn btn-success btn-block">
+                                    <i class="la la-cog"></i> Yetenek Yönetimi
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/Message/Index" class="btn btn-warning btn-block">
+                                    <i class="la la-envelope"></i> Mesaj Yönetimi
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/ToDoList/Index" class="btn btn-danger btn-block">
+                                    <i class="la la-tasks"></i> Yapılacaklar
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/AdminDashboard/SiteSettingsManagement" class="btn btn-secondary btn-block">
+                                    <i class="la la-cogs"></i> Site Ayarları
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Son Mesajlar -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Son Mesajlar</h4>
+                    </div>
+                    <div class="card-body">
+                        @if (ViewBag.RecentMessages != null)
+                        {
+                            @foreach (var message in ViewBag.RecentMessages)
+                            {
+                                <div class="d-flex align-items-center mb-3 p-2 border-bottom">
+                                    <div class="avatar avatar-sm mr-3">
+                                        <span class="avatar-title rounded-circle bg-primary">
+                                            @message.NameSurname.Substring(0, 1).ToUpper()
+                                        </span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h6 class="mb-1">@message.NameSurname</h6>
+                                        <p class="text-muted small mb-0">@message.Subject</p>
+                                        <small class="text-muted">@message.SendDate.ToString("dd MMM yyyy")</small>
+                                    </div>
+                                    @if (!message.isRead)
+                                    {
+                                        <span class="badge badge-primary">Yeni</span>
+                                    }
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted">Henüz mesaj bulunmuyor.</p>
+                        }
+                        <div class="text-center">
+                            <a href="/Message/Index" class="btn btn-primary btn-sm">Tüm Mesajları Görüntüle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Son Bildirimler ve Yapılacaklar -->
+        <div class="row">
+            <!-- Son Bildirimler -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Son Bildirimler</h4>
+                    </div>
+                    <div class="card-body">
+                        @if (ViewBag.RecentNotifications != null)
+                        {
+                            @foreach (var notification in ViewBag.RecentNotifications)
+                            {
+                                <div class="d-flex align-items-center mb-3 p-2 border-bottom">
+                                    <div class="mr-3">
+                                        <i class="@notification.IconClass text-@notification.NotificationType"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h6 class="mb-1">@notification.Title</h6>
+                                        <p class="text-muted small mb-0">@notification.Description</p>
+                                        <small class="text-muted">@notification.CreatedDate.ToString("dd MMM yyyy HH:mm")</small>
+                                    </div>
+                                    @if (!notification.IsRead)
+                                    {
+                                        <span class="badge badge-warning">Okunmadı</span>
+                                    }
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted">Henüz bildirim bulunmuyor.</p>
+                        }
+                        <div class="text-center">
+                            <a href="/AdminDashboard/NotificationManagement" class="btn btn-info btn-sm">Tüm Bildirimleri Görüntüle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Son Yapılacaklar -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Son Yapılacaklar</h4>
+                    </div>
+                    <div class="card-body">
+                        @if (ViewBag.RecentToDoItems != null)
+                        {
+                            @foreach (var todo in ViewBag.RecentToDoItems)
+                            {
+                                <div class="d-flex align-items-center mb-3 p-2 border-bottom">
+                                    <div class="mr-3">
+                                        @if (todo.Status)
+                                        {
+                                            <i class="la la-check-circle text-success"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="la la-clock-o text-warning"></i>
+                                        }
+                                    </div>
+                                    <div class="flex-1">
+                                        <h6 class="mb-1 @(todo.Status ? "text-decoration-line-through" : "")">@todo.Title</h6>
+                                        <small class="text-muted">@todo.Date.ToString("dd MMM yyyy")</small>
+                                    </div>
+                                    <span class="badge badge-@(todo.Status ? "success" : "warning")">
+                                        @(todo.Status ? "Tamamlandı" : "Bekliyor")
+                                    </span>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted">Henüz yapılacak iş bulunmuyor.</p>
+                        }
+                        <div class="text-center">
+                            <a href="/ToDoList/Index" class="btn btn-warning btn-sm">Tüm Yapılacakları Görüntüle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sistem Durum Özeti -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Sistem Durumu</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <h5>Sunucu Durumu</h5>
+                                    <span class="badge badge-success">Çevrimiçi</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <h5>Veritabanı</h5>
+                                    <span class="badge badge-success">Bağlı</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <h5>Son Güncelleme</h5>
+                                    <small class="text-muted">@DateTime.Now.ToString("dd/MM/yyyy HH:mm")</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

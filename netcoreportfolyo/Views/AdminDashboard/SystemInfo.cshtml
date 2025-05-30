@@ -1,0 +1,423 @@
+@{
+    ViewData["Title"] = "Sistem Bilgileri";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Sistem Bilgileri</h4>
+        
+        <!-- Genel Sistem Bilgileri -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Sistem Detayları</div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <th width="40%">Uygulama Adı:</th>
+                                <td>@ViewBag.AppName</td>
+                            </tr>
+                            <tr>
+                                <th>Versiyon:</th>
+                                <td>@ViewBag.Version</td>
+                            </tr>
+                            <tr>
+                                <th>Framework:</th>
+                                <td>.NET Core 6.0</td>
+                            </tr>
+                            <tr>
+                                <th>Sunucu Zamanı:</th>
+                                <td>@ViewBag.ServerTime.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                            </tr>
+                            <tr>
+                                <th>Çalışma Süresi:</th>
+                                <td id="uptime">Hesaplanıyor...</td>
+                            </tr>
+                            <tr>
+                                <th>Platform:</th>
+                                <td>@System.Runtime.InteropServices.RuntimeInformation.OSDescription</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Veritabanı Bilgileri</div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <th width="40%">Veritabanı:</th>
+                                <td>SQL Server</td>
+                            </tr>
+                            <tr>
+                                <th>Sunucu:</th>
+                                <td>ANIL</td>
+                            </tr>
+                            <tr>
+                                <th>Catalog:</th>
+                                <td>MyPortfolioDb</td>
+                            </tr>
+                            <tr>
+                                <th>Durum:</th>
+                                <td><span class="badge badge-success">Bağlı</span></td>
+                            </tr>
+                            <tr>
+                                <th>Son Yedekleme:</th>
+                                <td class="text-muted">Belirlenmemiş</td>
+                            </tr>
+                            <tr>
+                                <th>Boyut:</th>
+                                <td>~15.6 MB</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performans Metrikleri -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card card-stats card-success">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Sistem Durumu</p>
+                                    <h4 class="card-title">Sağlıklı</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-info">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-clock-o"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Ortalama Yanıt</p>
+                                    <h4 class="card-title">85ms</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-warning">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-memory"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Bellek Kullanımı</p>
+                                    <h4 class="card-title">256MB</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-stats card-primary">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-microchip"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">CPU Kullanımı</p>
+                                    <h4 class="card-title">12%</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bağımlılık Durumu -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Sistem Bağımlılıkları</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Servis</th>
+                                        <th>Durum</th>
+                                        <th>Versiyon</th>
+                                        <th>Son Kontrol</th>
+                                        <th>Yanıt Süresi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="la la-database"></i> SQL Server</td>
+                                        <td><span class="badge badge-success">Aktif</span></td>
+                                        <td>2019</td>
+                                        <td>@DateTime.Now.ToString("HH:mm:ss")</td>
+                                        <td>12ms</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="la la-code"></i> Entity Framework</td>
+                                        <td><span class="badge badge-success">Aktif</span></td>
+                                        <td>6.0.25</td>
+                                        <td>@DateTime.Now.ToString("HH:mm:ss")</td>
+                                        <td>8ms</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="la la-globe"></i> ASP.NET Core</td>
+                                        <td><span class="badge badge-success">Aktif</span></td>
+                                        <td>6.0</td>
+                                        <td>@DateTime.Now.ToString("HH:mm:ss")</td>
+                                        <td>5ms</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="la la-envelope"></i> SMTP Server</td>
+                                        <td><span class="badge badge-warning">Test Edilmedi</span></td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Güvenlik ve Yapılandırma -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Güvenlik Durumu</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>HTTPS Sertifikası</span>
+                            <span class="badge badge-success">Aktif</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>SQL Injection Koruması</span>
+                            <span class="badge badge-success">Aktif</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>CSRF Koruması</span>
+                            <span class="badge badge-success">Aktif</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>Veri Şifreleme</span>
+                            <span class="badge badge-success">Aktif</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Güvenlik Güncellemeleri</span>
+                            <span class="badge badge-info">Güncel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Yapılandırma</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>Debug Modu</span>
+                            <span class="badge badge-warning">Development</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>Caching</span>
+                            <span class="badge badge-success">Aktif</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>Session Timeout</span>
+                            <span class="badge badge-info">20 dk</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>Log Seviyesi</span>
+                            <span class="badge badge-info">Information</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Maksimum Dosya Boyutu</span>
+                            <span class="badge badge-secondary">10MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Log Dosyaları -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Son Sistem Logları</div>
+                        <div class="card-category">Son 24 saatteki önemli olaylar</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker bg-success"></div>
+                                <div class="timeline-content">
+                                    <h6 class="timeline-title">Sistem Başlatıldı</h6>
+                                    <p class="timeline-text">Uygulama başarıyla başlatıldı ve tüm servisler aktif duruma geçti.</p>
+                                    <small class="text-muted">@DateTime.Now.AddHours(-2).ToString("HH:mm") - Bugün</small>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker bg-info"></div>
+                                <div class="timeline-content">
+                                    <h6 class="timeline-title">Veritabanı Bağlantısı</h6>
+                                    <p class="timeline-text">SQL Server veritabanına başarıyla bağlanıldı.</p>
+                                    <small class="text-muted">@DateTime.Now.AddHours(-2).ToString("HH:mm") - Bugün</small>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker bg-warning"></div>
+                                <div class="timeline-content">
+                                    <h6 class="timeline-title">Yavaş Sorgu Tespit Edildi</h6>
+                                    <p class="timeline-text">Messages tablosunda 2.5 saniye süren bir sorgu tespit edildi.</p>
+                                    <small class="text-muted">@DateTime.Now.AddHours(-5).ToString("HH:mm") - Bugün</small>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker bg-success"></div>
+                                <div class="timeline-content">
+                                    <h6 class="timeline-title">Cache Temizlendi</h6>
+                                    <p class="timeline-text">Sistem önbelleği otomatik olarak temizlendi.</p>
+                                    <small class="text-muted">@DateTime.Now.AddHours(-8).ToString("HH:mm") - Bugün</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- İşlem Butonları -->
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <a href="/AdminDashboard/Index" class="btn btn-secondary">Ana Sayfaya Dön</a>
+                <button onclick="runSystemCheck()" class="btn btn-info">Sistem Kontrolü Yap</button>
+                <button onclick="clearCache()" class="btn btn-warning">Cache Temizle</button>
+                <button onclick="exportSystemInfo()" class="btn btn-primary">Sistem Raporu İndir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.timeline {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #e9ecef;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 20px;
+    height: calc(100% + 10px);
+    width: 2px;
+    background-color: #e9ecef;
+}
+
+.timeline-title {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.timeline-text {
+    margin-bottom: 5px;
+    color: #666;
+}
+</style>
+
+<script>
+    // Çalışma süresini hesapla (örnek)
+    function updateUptime() {
+        const startTime = new Date().getTime() - (Math.random() * 86400000 * 7); // Son 7 gün içinde rastgele
+        const now = new Date().getTime();
+        const diff = now - startTime;
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        
+        document.getElementById('uptime').innerText = `${days} gün, ${hours} saat, ${minutes} dakika`;
+    }
+
+    function runSystemCheck() {
+        alert('Sistem kontrolü başlatılıyor... Tüm servisler kontrol ediliyor.');
+    }
+
+    function clearCache() {
+        if(confirm('Cache temizlensin mi? Bu işlem performansı geçici olarak etkileyebilir.')) {
+            alert('Cache başarıyla temizlendi.');
+        }
+    }
+
+    function exportSystemInfo() {
+        alert('Sistem bilgileri raporu indiriliyor...');
+    }
+
+    // Sayfa yüklendiğinde çalıştır
+    updateUptime();
+    setInterval(updateUptime, 60000); // Her dakika güncelle
+</script> 

@@ -47,6 +47,42 @@ namespace netcoreportfolyo.Migrations
                     b.ToTable("Abouts");
                 });
 
+            modelBuilder.Entity("netcoreportfolyo.DAL.Entities.AdminProfile", b =>
+                {
+                    b.Property<int>("AdminProfileId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminProfileId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminProfileId");
+
+                    b.ToTable("AdminProfiles");
+                });
+
             modelBuilder.Entity("netcoreportfolyo.DAL.Entities.Contact", b =>
                 {
                     b.Property<int>("ContactId")
@@ -173,6 +209,45 @@ namespace netcoreportfolyo.Migrations
                     b.ToTable("Messages");
                 });
 
+            modelBuilder.Entity("netcoreportfolyo.DAL.Entities.Notification", b =>
+                {
+                    b.Property<int>("NotificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IconClass")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LinkUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NotificationType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("NotificationId");
+
+                    b.ToTable("Notifications");
+                });
+
             modelBuilder.Entity("netcoreportfolyo.DAL.Entities.Portfolio", b =>
                 {
                     b.Property<int>("PortfolioId")
@@ -204,6 +279,46 @@ namespace netcoreportfolyo.Migrations
                     b.HasKey("PortfolioId");
 
                     b.ToTable("Portfolios");
+                });
+
+            modelBuilder.Entity("netcoreportfolyo.DAL.Entities.SiteSettings", b =>
+                {
+                    b.Property<int>("SiteSettingsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SiteSettingsId"));
+
+                    b.Property<string>("AdminPanelTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FaviconUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsMaintenanceMode")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LogoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MaintenanceMessage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SearchPlaceholder")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SiteName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SiteSettingsId");
+
+                    b.ToTable("SiteSettings");
                 });
 
             modelBuilder.Entity("netcoreportfolyo.DAL.Entities.Skill", b =>
@@ -278,6 +393,33 @@ namespace netcoreportfolyo.Migrations
                     b.HasKey("TestimonialId");
 
                     b.ToTable("Testimonials");
+                });
+
+            modelBuilder.Entity("netcoreportfolyo.DAL.Entities.ToDoList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ToDoLists");
                 });
 #pragma warning restore 612, 618
         }

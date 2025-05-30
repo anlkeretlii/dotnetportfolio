@@ -1,0 +1,268 @@
+@model List<netcoreportfolyo.DAL.Entities.Notification>
+@{
+    ViewData["Title"] = "Bildirim Yönetimi";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Bildirim Yönetimi</h4>
+        
+        <!-- Yeni Bildirim Ekleme -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Yeni Bildirim Ekle</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="/AdminDashboard/CreateNotification">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="title">Başlık</label>
+                                        <input type="text" class="form-control" name="title" placeholder="Bildirim başlığını girin" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="type">Bildirim Türü</label>
+                                        <select class="form-control" name="type" required>
+                                            <option value="">Tür seçin</option>
+                                            <option value="success">Başarı</option>
+                                            <option value="info">Bilgi</option>
+                                            <option value="warning">Uyarı</option>
+                                            <option value="danger">Hata</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>&nbsp;</label>
+                                        <div>
+                                            <button type="submit" class="btn btn-primary btn-block">Bildirim Ekle</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="description">Açıklama</label>
+                                        <textarea class="form-control" name="description" rows="3" placeholder="Bildirim açıklamasını girin" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bildirimler Listesi -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Tüm Bildirimler</div>
+                        <div class="card-category">
+                            Toplam @Model.Count bildirim bulunuyor
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @if (Model.Any())
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Durum</th>
+                                            <th>Tür</th>
+                                            <th>Başlık</th>
+                                            <th>Açıklama</th>
+                                            <th>Tarih</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var notification in Model)
+                                        {
+                                            <tr class="@(notification.IsRead ? "" : "table-warning")">
+                                                <td>
+                                                    @if (notification.IsRead)
+                                                    {
+                                                        <span class="badge badge-success">Okundu</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge badge-warning">Okunmadı</span>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-@notification.NotificationType">
+                                                        <i class="@notification.IconClass"></i>
+                                                        @switch(notification.NotificationType)
+                                                        {
+                                                            case "success": <text>Başarı</text>; break;
+                                                            case "info": <text>Bilgi</text>; break;
+                                                            case "warning": <text>Uyarı</text>; break;
+                                                            case "danger": <text>Hata</text>; break;
+                                                            default: <text>@notification.NotificationType</text>; break;
+                                                        }
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <strong>@notification.Title</strong>
+                                                </td>
+                                                <td>
+                                                    @if (notification.Description.Length > 50)
+                                                    {
+                                                        <span>@notification.Description.Substring(0, 50)...</span>
+                                                        <small class="d-block text-muted">
+                                                            <a href="#" data-toggle="tooltip" title="@notification.Description">Tümünü göster</a>
+                                                        </small>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>@notification.Description</span>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <small>
+                                                        @notification.CreatedDate.ToString("dd/MM/yyyy")<br>
+                                                        @notification.CreatedDate.ToString("HH:mm")
+                                                    </small>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group" role="group">
+                                                        @if (!notification.IsRead)
+                                                        {
+                                                            <a href="/AdminDashboard/MarkNotificationAsRead/@notification.NotificationId" 
+                                                               class="btn btn-sm btn-success" 
+                                                               data-toggle="tooltip" 
+                                                               title="Okundu olarak işaretle">
+                                                                <i class="la la-check"></i>
+                                                            </a>
+                                                        }
+                                                        <a href="/AdminDashboard/DeleteNotification/@notification.NotificationId" 
+                                                           class="btn btn-sm btn-danger" 
+                                                           onclick="return confirm('Bu bildirimi silmek istediğinizden emin misiniz?')"
+                                                           data-toggle="tooltip" 
+                                                           title="Bildirimi sil">
+                                                            <i class="la la-trash"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-center py-5">
+                                <i class="la la-bell-slash" style="font-size: 48px; color: #ccc;"></i>
+                                <h5 class="mt-3 text-muted">Henüz bildirim bulunmuyor</h5>
+                                <p class="text-muted">Yukarıdaki formu kullanarak ilk bildiriminizi oluşturun.</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- İstatistikler -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card card-stats card-info">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-bell"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Toplam</p>
+                                    <h4 class="card-title">@Model.Count</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-success">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Okundu</p>
+                                    <h4 class="card-title">@Model.Count(x => x.IsRead)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-warning">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-clock-o"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Okunmadı</p>
+                                    <h4 class="card-title">@Model.Count(x => !x.IsRead)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-primary">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Bu Ay</p>
+                                    <h4 class="card-title">@Model.Count(x => x.CreatedDate.Month == DateTime.Now.Month)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <a href="/AdminDashboard/Index" class="btn btn-secondary">Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Tooltip'leri etkinleştir
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script> 

@@ -1,0 +1,391 @@
+@{
+    ViewData["Title"] = "Analytics";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Analytics Dashboard</h4>
+        
+        <!-- Genel İstatistikler -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Aylık Mesaj İstatistikleri</div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="monthlyMessagesChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yetenek ve Portfolio Dağılımı -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Yetenek Dağılımı</div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="skillDistributionChart" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Portfolio Kategorileri</div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="portfolioCategoriesChart" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aktivite Özeti -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card card-stats card-primary">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-eye"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Sayfa Görüntüleme</p>
+                                    <h4 class="card-title">15,234</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-info">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-users"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Ziyaretçi</p>
+                                    <h4 class="card-title">2,847</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-success">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-download"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">CV İndirme</p>
+                                    <h4 class="card-title">486</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-warning">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-clock-o"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Ort. Kalış Süresi</p>
+                                    <h4 class="card-title">3:24</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mesaj Analizi -->
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Son 30 Günde Gelen Mesajlar</div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="dailyMessagesChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Mesaj Türleri</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="progress-card">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="text-muted">İş Teklifleri</span>
+                                <span class="text-muted">65%</span>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-primary" style="width: 65%"></div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="text-muted">Genel Sorular</span>
+                                <span class="text-muted">25%</span>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-info" style="width: 25%"></div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="text-muted">İşbirliği</span>
+                                <span class="text-muted">10%</span>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trafik Kaynakları -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Trafik Kaynakları</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Kaynak</th>
+                                        <th>Ziyaretçi</th>
+                                        <th>Yüzde</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fab fa-google text-danger"></i> Google</td>
+                                        <td>1,247</td>
+                                        <td><span class="badge badge-success">43.8%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fab fa-linkedin text-primary"></i> LinkedIn</td>
+                                        <td>856</td>
+                                        <td><span class="badge badge-info">30.1%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-link text-secondary"></i> Direct</td>
+                                        <td>423</td>
+                                        <td><span class="badge badge-warning">14.9%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fab fa-github text-dark"></i> GitHub</td>
+                                        <td>321</td>
+                                        <td><span class="badge badge-secondary">11.2%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Popüler Sayfalar</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Sayfa</th>
+                                        <th>Görüntüleme</th>
+                                        <th>Yüzde</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ana Sayfa</td>
+                                        <td>6,789</td>
+                                        <td><span class="badge badge-primary">44.5%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Portfolio</td>
+                                        <td>3,456</td>
+                                        <td><span class="badge badge-info">22.7%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hakkımda</td>
+                                        <td>2,134</td>
+                                        <td><span class="badge badge-success">14.0%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>İletişim</td>
+                                        <td>1,865</td>
+                                        <td><span class="badge badge-warning">12.2%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Blog</td>
+                                        <td>1,000</td>
+                                        <td><span class="badge badge-secondary">6.6%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <a href="/AdminDashboard/Index" class="btn btn-secondary">Ana Sayfaya Dön</a>
+                <button onclick="exportAnalytics()" class="btn btn-primary">Raporu İndir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Aylık Mesaj Grafiği
+    const monthlyData = @Html.Raw(Json.Serialize(ViewBag.MonthlyMessages ?? new List<object>()));
+    
+    const monthlyCtx = document.getElementById('monthlyMessagesChart').getContext('2d');
+    new Chart(monthlyCtx, {
+        type: 'line',
+        data: {
+            labels: monthlyData.map(m => m.month || 'N/A'),
+            datasets: [{
+                label: 'Mesaj Sayısı',
+                data: monthlyData.map(m => m.count || 0),
+                borderColor: '#1f77b4',
+                backgroundColor: 'rgba(31, 119, 180, 0.1)',
+                tension: 0.3
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true
+                }
+            }
+        }
+    });
+
+    // Yetenek Dağılımı
+    const skillData = @Html.Raw(Json.Serialize(ViewBag.SkillDistribution ?? new List<object>()));
+    
+    const skillCtx = document.getElementById('skillDistributionChart').getContext('2d');
+    new Chart(skillCtx, {
+        type: 'doughnut',
+        data: {
+            labels: skillData.map(s => s.skill || 'N/A'),
+            datasets: [{
+                data: skillData.map(s => s.count || 0),
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Portfolio Kategorileri
+    const portfolioData = @Html.Raw(Json.Serialize(ViewBag.PortfolioCategories ?? new List<object>()));
+    
+    const portfolioCtx = document.getElementById('portfolioCategoriesChart').getContext('2d');
+    new Chart(portfolioCtx, {
+        type: 'bar',
+        data: {
+            labels: portfolioData.map(p => p.category || 'N/A'),
+            datasets: [{
+                label: 'Proje Sayısı',
+                data: portfolioData.map(p => p.count || 0),
+                backgroundColor: '#36A2EB'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Günlük Mesajlar (Örnek veri)
+    const dailyCtx = document.getElementById('dailyMessagesChart').getContext('2d');
+    const last30Days = Array.from({length: 30}, (_, i) => {
+        const date = new Date();
+        date.setDate(date.getDate() - i);
+        return date.toLocaleDateString('tr-TR');
+    }).reverse();
+
+    new Chart(dailyCtx, {
+        type: 'line',
+        data: {
+            labels: last30Days,
+            datasets: [{
+                label: 'Günlük Mesajlar',
+                data: Array.from({length: 30}, () => Math.floor(Math.random() * 10) + 1),
+                borderColor: '#28a745',
+                backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                tension: 0.3,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    function exportAnalytics() {
+        alert('Analytics raporu indiriliyor... (Bu özellik geliştirilecek)');
+    }
+</script> 

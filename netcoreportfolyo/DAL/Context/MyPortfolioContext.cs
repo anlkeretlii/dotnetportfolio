@@ -18,5 +18,9 @@ namespace netcoreportfolyo.DAL.Context
         public DbSet<Skill> Skills { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<AdminProfile> AdminProfiles { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<SiteSettings> SiteSettings { get; set; }
+        public DbSet<ToDoList> ToDoLists { get; set; }
     }
 }
